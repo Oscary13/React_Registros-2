@@ -6,7 +6,7 @@ import axios from "axios";
 import { Modal, ModalBody, ModalFooter, ModalHeader } from "reactstrap";
 
 function App() {
-  const baseUrl = "http://127.0.0.1:8000/api/codigo/";
+  const baseUrl = "https://api-codigos.herokuapp.com/api/codigo/";
   const [data, setData] = useState([]);
   const [datos, setDatos] = useState({
     codigo: "",
@@ -64,12 +64,14 @@ function App() {
           <strong>INGRESA CODIGO POSTAL:</strong>
         </label>
         <input
+        class="i"
           name="codigo"
           type="number"
           className="form-control"
           placeholder="Ingresa tu Codigo Postal"
           onChange={handleChange}
         ></input>
+        <br/>
         <br />
         <table class="normal">
           <thead>
